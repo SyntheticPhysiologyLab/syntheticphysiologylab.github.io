@@ -1,0 +1,11 @@
+---
+title: Matrix elasticity regulates the optimal cardiac myocyte shape for contractility
+collection: publications
+date: 2014-6-1
+venue: American Journal of Physiology-Heart and Circulatory Physiology
+authors: McCain, M., Yuan, H., Pasqualini, F., Campbell, P., Parker, K.
+paperurl: http://dx.doi.org/10.1152/ajpheart.00799.2013
+---
+<h2> Abstract </h2>
+<jats:p> Concentric hypertrophy is characterized by ventricular wall thickening, fibrosis, and decreased myocyte length-to-width aspect ratio. Ventricular thickening is considered compensatory because it reduces wall stress, but the functional consequences of cell shape remodeling in this pathological setting are unknown. We hypothesized that decreases in myocyte aspect ratio allow myocytes to maximize contractility when the extracellular matrix becomes stiffer due to conditions such as fibrosis. To test this, we engineered neonatal rat ventricular myocytes into rectangles mimicking the 2-D profiles of healthy and hypertrophied myocytes on hydrogels with moderate (13 kPa) and high (90 kPa) elastic moduli. Actin alignment was unaffected by matrix elasticity, but sarcomere content was typically higher on stiff gels. Microtubule polymerization was higher on stiff gels, implying increased intracellular elastic modulus. On moderate gels, myocytes with moderate aspect ratios (∼7:1) generated the most peak systolic work compared with other cell shapes. However, on stiffer gels, low aspect ratios (∼2:1) generated the most peak systolic work. To compare the relative contributions of intracellular vs. extracellular elasticity to contractility, we developed an analytical model and used our experimental data to fit unknown parameters. Our model predicted that matrix elasticity dominates over intracellular elasticity, suggesting that the extracellular matrix may potentially be a more effective therapeutic target than microtubules. Our data and model suggest that myocytes with lower aspect ratios have a functional advantage when the elasticity of the extracellular matrix decreases due to conditions such as fibrosis, highlighting the role of the extracellular matrix in cardiac disease. </jats:p>
+<p align= "justify">
