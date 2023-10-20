@@ -50,3 +50,9 @@ We use micro/nano-fabrication and biological self-assembly to create high-throug
    EU/MUR PNRR<br>
    2022-2025<br>
    ![PNRR](/images/PNRR-Next-Generation-EU-1024x576.jpg){: width="250" }
+
+5. RESET. REsolving infections by modulating SEnescenT macrophages (in collaboration with the Infection Dynamics Lab of Loris Rizzello at UNIMI)
+<br>
+   2022PL44LM<br>
+   2022-2027<br>
+   ![mUR](/images/logo-miur.png){: width="250" }
