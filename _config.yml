@@ -159,6 +159,9 @@ collections:
   team:
     output: true
     permalink: /:collection/:path/
+  news:
+    output: true
+    permalink: /:collection/:path/
   #research:
   #  output: true
   #  permalink: /:collection/:path/
@@ -173,6 +176,15 @@ defaults:
     values:
       layout: single
       author_profile: true
+  - scope:
+      path: ""
+      type: news 
+    values:
+      layout: single
+      author_profile: true
+      share: false 
+      comments: true
+
   - scope:
       path: ""
       type: culture

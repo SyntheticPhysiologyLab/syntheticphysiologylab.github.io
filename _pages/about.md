@@ -8,6 +8,16 @@ redirect_from:
   - /about.html
 ---
 
+<div style="text-align:left; vertical-align: middle border-left: 500px">
+<h2><a href="{{site.url}}/news"><span style="color:gray">Latest news:</span></a></h2>
+{% assign sorted = site.news | sort: 'date' | reverse %}
+{% for item in sorted limit:5%}
+<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{% endfor %}
+<br>
+</div>
+<br>
+
 ## GENETIC ENGINEERING OF HUMAN CELLS 
 
 We use genetic engineering and genome editing techniques to introduce fluorescent structural and functional sensors in human cell lines and human induced pluripotent stem cells.
