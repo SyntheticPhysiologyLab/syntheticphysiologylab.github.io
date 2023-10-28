@@ -4,9 +4,10 @@ collection: team
 header:
   teaser: Julius_Zimmermann.jpg
 tags: SeniorScientist 
-tagline: Senior scientist 
+tagline: Modeling and simulation / Image analysis 
 date: 2023-09-01
-email: TBA@unipv.it
+email: juliusmanfredkurt.zimmermann@unipv.it
 ---
 
-Senior Scientist
+Senior Scientist,
+University of Pavia
