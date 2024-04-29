@@ -4,7 +4,7 @@ collection: team
 header:
   teaser: Tehreem.jpg  
 tags: PhD 
-tagline: Advanced optical methods in tissue engineering
+tagline: Bioinformatics 
 date: 2024-05-01
 email: tehreem.ali@unipv.it 
 ---
