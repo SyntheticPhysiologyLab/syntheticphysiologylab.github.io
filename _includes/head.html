@@ -2,7 +2,36 @@
 
 <meta charset="utf-8">
 
+{% assign spl_new_site = "https://syntheticphysiologylab.com" %}
+{% assign spl_old_path = page.url | replace: "index.html", "" %}
+{% assign spl_redirect_path = spl_old_path %}
+{% if spl_old_path == "/culture/" %}
+  {% assign spl_redirect_path = "/art-and-science/" %}
+{% elsif spl_old_path contains "/publications/" %}
+  {% assign spl_redirect_path = "/publications/" %}
+{% elsif spl_old_path contains "/team/" %}
+  {% assign spl_redirect_path = "/team/" %}
+{% elsif spl_old_path contains "/news/" %}
+  {% assign spl_redirect_path = "/news/" %}
+{% elsif spl_old_path contains "/contact/" %}
+  {% assign spl_redirect_path = "/contact/" %}
+{% elsif spl_old_path contains "/research/" %}
+  {% assign spl_redirect_path = "/research/" %}
+{% elsif spl_old_path contains "/sitemap/" %}
+  {% assign spl_redirect_path = "/" %}
+{% elsif spl_old_path contains "/terms/" %}
+  {% assign spl_redirect_path = "/" %}
+{% elsif spl_old_path contains "/404/" %}
+  {% assign spl_redirect_path = "/" %}
+{% endif %}
+{% assign spl_new_url = spl_redirect_path | prepend: spl_new_site %}
+
 {% include seo.html %}
+
+<meta http-equiv="refresh" content="0; url={{ spl_new_url }}">
+<script>
+  window.location.replace({{ spl_new_url | jsonify }});
+</script>
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
