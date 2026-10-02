@@ -1,0 +1,51 @@
+{% comment %}
+  Published instead of the legacy Jekyll pages.
+  GitHub Pages cannot set an arbitrary HTTP 301 to another origin, so this
+  document is the permanent-redirect fallback: meta refresh (0 seconds),
+  location.replace (keeps the query string and hash), and a canonical link.
+  Unknown paths are served as /404.html while the browser URL stays the
+  requested path, so that document must follow window.location.
+{% endcomment %}
+{% assign redirect_host = site.redirect_host | default: "https://syntheticphysiologylab.com" %}
+{% assign dest_path = page.url | default: "/" %}
+{% assign catch_all = false %}
+{% if dest_path == "/404.html" %}
+  {% assign catch_all = true %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting to Synthetic Physiology Lab</title>
+  {% if catch_all %}
+  <link rel="canonical" href="{{ redirect_host }}/">
+  <script>
+    (function () {
+      var dest = "{{ redirect_host }}" + window.location.pathname + window.location.search + window.location.hash;
+      var canon = document.querySelector('link[rel="canonical"]');
+      if (canon) canon.href = dest;
+      window.location.replace(dest);
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url={{ redirect_host }}/">
+  </noscript>
+  {% else %}
+  <link rel="canonical" href="{{ redirect_host }}{{ dest_path | escape }}">
+  <script>
+    window.location.replace("{{ redirect_host }}" + window.location.pathname + window.location.search + window.location.hash);
+  </script>
+  <meta http-equiv="refresh" content="0; url={{ redirect_host }}{{ dest_path | escape }}">
+  {% endif %}
+</head>
+<body>
+  <p>The Synthetic Physiology Lab website has moved.
+    {% if catch_all %}
+    <a id="redirect-target" href="{{ redirect_host }}/">Continue to {{ redirect_host }}/</a>.
+    {% else %}
+    <a id="redirect-target" href="{{ redirect_host }}{{ dest_path | escape }}">Continue to {{ redirect_host }}{{ dest_path | escape }}</a>.
+    {% endif %}
+  </p>
+</body>
+</html>
